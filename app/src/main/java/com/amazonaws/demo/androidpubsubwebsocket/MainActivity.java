@@ -1,5 +1,6 @@
 package com.amazonaws.demo.androidpubsubwebsocket;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -59,6 +60,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //getActionBar().setDisplayHomeAsUpEnabled(true);
         txtSubscribe = (EditText) findViewById(R.id.txtSubscribe);
         txtTopic = (EditText) findViewById(R.id.txtTopic);
         txtMessage = (EditText) findViewById(R.id.txtMessage);

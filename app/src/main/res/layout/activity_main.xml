@@ -1,56 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="30dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="3dp" >
+    android:padding="3dp"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        >
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="Client Id:" />
+            android:text="Client Id:"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            />
 
         <TextView
             android:id="@+id/tvClientId"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="5"
-            android:gravity="center_vertical" />
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="center_vertical"
-            android:text="Status:" />
+            android:text="Status:"
+            android:textColor="#000000"
+            />
 
         <TextView
             android:id="@+id/tvStatus"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="5"
             android:gravity="center_vertical"
-            android:text="Disconnected" />
+            android:text="Disconnected"
+            android:textColor="#000000"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
         <Button
             android:id="@+id/btnConnect"
@@ -58,7 +72,9 @@
             android:layout_weight="6"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:text="Connect" />
+            android:text="Connect"
+            android:backgroundTint="#3F51B5"
+            android:textColor="#ffffff"/>
 
         <Button
             android:id="@+id/btnDisconnect"
@@ -66,13 +82,16 @@
             android:layout_weight="4"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:text="Disconnect" />
+            android:text="Disconnect"
+            android:backgroundTint="#3F51B5"
+            android:textColor="#ffffff"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
         <EditText
             android:id="@+id/txtSubscribe"
@@ -80,27 +99,31 @@
             android:layout_height="match_parent"
             android:layout_weight="5"
             android:gravity="center_vertical"
-            android:hint="Topic name" />
+            android:hint="Topic name to subscribe" />
 
         <Button
             android:id="@+id/btnSubscribe"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="Subscribe" />
+            android:text="Subscribe"
+            android:backgroundTint="#3F51B5"
+            android:textColor="#ffffff"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:gravity="center_vertical|top"
-            android:text="Last message:" />
+            android:text="Last message:"
+            android:textColor="#000000"/>
 
         <TextView
             android:id="@+id/tvLastMessage"
@@ -108,41 +131,46 @@
             android:layout_height="match_parent"
             android:layout_weight="5"
             android:gravity="center_vertical|top"
-            android:text="N/A" />
+            android:text="N/A"
+            android:textColor="#000000"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:gravity="center_vertical"
-            android:text="Topic:" />
+            android:text="Topic:"
+            android:textColor="#000000"/>
 
         <EditText
             android:id="@+id/txtTopic"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5"
+            android:hint="Topic name to publish"
             android:gravity="center_vertical" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal" >
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:gravity="center_vertical"
-            android:text="Message:" />
+            android:text="Message:"
+            android:textColor="#000000"/>
 
         <EditText
             android:id="@+id/txtMessage"
@@ -152,12 +180,19 @@
             android:gravity="center_vertical" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnPublish"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:text="Publish" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnPublish"
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Publish"
+            android:textColor="#ffffff"
+            android:backgroundTint="#3F51B5"
+            />
+    </LinearLayout>
 </LinearLayout>
-
